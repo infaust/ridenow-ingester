@@ -5,9 +5,9 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/spf13/viper"
 	"log"
-	"ridenow/msw"
-	"ridenow/msw/models"
-	"ridenow/msw/queue"
+	"ridenow/ingester"
+	"ridenow/ingester/models"
+	"ridenow/ingester/queue"
 	"sync"
 )
 
