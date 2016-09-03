@@ -83,7 +83,8 @@ func main() {
 			if err != nil {
 				log.Panic(err)
 			}
-			if changed || true {
+			notify := viper.GetBool("NOTIFY_ALWAYS")
+			if changed || notify {
 				time := int64(forecast.Time.UnixNano())
 				msg := msw.Forecast{
 					Id:              &forecast.Id,
