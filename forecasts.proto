@@ -1,0 +1,11 @@
+syntax = "proto3";
+package msw;
+
+
+message Forecast {
+	string id = 1;
+	int64 location_id = 2;
+	double wave_height_m = 3;
+	double swell_period_secs = 4;
+	int64 time = 5;
+}

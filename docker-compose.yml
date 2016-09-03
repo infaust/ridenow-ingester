@@ -1,0 +1,15 @@
+version: '2'
+services:
+  ridenow_db:
+    image: ridenow_db
+    ports: 
+      - "5432:6432"
+  scrapper:
+    build: .
+    command: go run cmd/main.go
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ridenow_db
